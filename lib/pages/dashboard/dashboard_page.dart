@@ -823,6 +823,7 @@ Widget serviceCard(
   required List list,
 }) {
   return Card(
+    color: Colors.white,
     elevation: Responsive.isMobile(context) ? 6 : 8,
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
     child: Padding(

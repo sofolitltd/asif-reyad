@@ -8,15 +8,15 @@ import 'logo.dart';
 class Footer extends StatelessWidget {
   final GlobalKey itemKeyHome;
   const Footer({
-    Key? key,
+    super.key,
     required this.itemKeyHome,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
     return Container(
       constraints: const BoxConstraints(minHeight: 220),
-      color: Colors.black26,
+      color: Colors.grey.shade200,
       padding: EdgeInsets.symmetric(
         vertical: 20,
         horizontal: MediaQuery.of(context).size.width * .1,
@@ -60,65 +60,21 @@ class Footer extends StatelessWidget {
 
                       //menu
                       Row(
-                        crossAxisAlignment: CrossAxisAlignment.end,
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        mainAxisSize: MainAxisSize.min,
                         children: [
-                          Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            mainAxisSize: MainAxisSize.min,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              InkWell(
-                                onTap: () {},
-                                child: const Text(
-                                  'About',
-                                  textAlign: TextAlign.left,
-                                  style: TextStyle(color: Colors.black87),
-                                ),
-                              ),
-                              InkWell(
-                                onTap: () {},
-                                child: const Text(
-                                  'Skills',
-                                  style: TextStyle(color: Colors.black87),
-                                ),
-                              ),
-                              InkWell(
-                                onTap: () {},
-                                child: const Text(
-                                  'Services',
-                                  style: TextStyle(color: Colors.black87),
-                                ),
-                              ),
-                              InkWell(
-                                onTap: () {},
-                                child: const Text(
-                                  'Portfolio',
-                                  style: TextStyle(color: Colors.black87),
-                                ),
-                              ),
-                            ],
-                          ),
-
-                          //icon
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              socialMediaButton(
-                                  iconName: 'linkedin.svg',
-                                  type: '',
-                                  data: kDevLinkedin),
-                              socialMediaButton(
-                                  iconName: 'facebook.svg',
-                                  type: '',
-                                  data: kDevFacebook),
-                              socialMediaButton(
-                                  iconName: 'email.svg',
-                                  type: 'mailto:',
-                                  data: kDevEmail),
-                            ],
-                          ),
+                          socialMediaButton(
+                              iconName: 'linkedin.svg',
+                              type: '',
+                              data: kDevLinkedin),
+                          socialMediaButton(
+                              iconName: 'facebook.svg',
+                              type: '',
+                              data: kDevFacebook),
+                          socialMediaButton(
+                              iconName: 'email.svg',
+                              type: 'mailto:',
+                              data: kDevEmail),
                         ],
                       ),
 
@@ -155,40 +111,6 @@ class Footer extends StatelessWidget {
                         ],
                       ),
 
-                      //menu
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          MaterialButton(
-                            onPressed: () {},
-                            child: const Text(
-                              'About',
-                              style: TextStyle(color: Colors.black87),
-                            ),
-                          ),
-                          MaterialButton(
-                            onPressed: () {},
-                            child: const Text(
-                              'Skills',
-                              style: TextStyle(color: Colors.black87),
-                            ),
-                          ),
-                          MaterialButton(
-                            onPressed: () {},
-                            child: const Text(
-                              'Services',
-                              style: TextStyle(color: Colors.black87),
-                            ),
-                          ),
-                          MaterialButton(
-                            onPressed: () {},
-                            child: const Text(
-                              'Portfolio',
-                              style: TextStyle(color: Colors.black87),
-                            ),
-                          ),
-                        ],
-                      ),
 
                       //icon
                       Row(
@@ -214,7 +136,7 @@ class Footer extends StatelessWidget {
                 ),
 
           //copy right
-          const Text('© asifreyad.github.io | All right reserved')
+          const Text('© asif-reyad.web.app | All right reserved')
         ],
       ),
     );
